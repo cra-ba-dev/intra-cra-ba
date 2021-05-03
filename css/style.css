@@ -24,15 +24,9 @@ nav{
   height: auto;
 }
 
-.cards-site{
-  width: 100%;
-  height: 100%;
-  /* padding: 1rem 2rem 0 2rem; */
-}
-
 .grid-container-site{
   display: grid;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -126,7 +120,7 @@ nav{
   padding-top: 10px;
 }
 
-@media (min-width: 600px){
+@media (min-width: 300px){
   .grid-container-site{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -136,7 +130,10 @@ nav{
   .grid-container-site{
     grid-template-columns: repeat(3, 1fr);
   }
+  
 }
+
+
 
 /*Chat*/
 .div-img{

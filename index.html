@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="index.js"></script>
+
+  <title>Portal CRA</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="assets/CRABA.png" alt="" class="logo-img">
+    </nav>
+  </header>
+
+  <section class="cards-site">
+    <div class="grid-container-site">
+
+
+      <div class="flip-card grid-item-site">
+        <a href="https://meet.jit.si/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front jitsi">
+            </div>
+            <div class="flip-card-back">
+              <h1>Jitsi Meet</h1>
+              <p>Inicie um novo atendimento no Jitsi</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="https://cra-ba.org.br/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front site-craba">
+            </div>
+            <div class="flip-card-back">
+              <h1>Site do CRA-BA</h1>
+              <p>Acesse o site do CRA-BA</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="https://cra-ba.implanta.net.br/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front implanta">
+            </div>
+            <div class="flip-card-back">
+              <h1>Soluções Implanta</h1>
+              <p>Acesse todos os sistemas Implanta.net</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="https://www.office.com/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front webmail">
+            </div>
+            <div class="flip-card-back">
+              <h2>Office 365</h2>
+              <p>Acesse o seu webmail</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <a href="http://192.168.1.195/interact_multiagent/" target="_blank">
+          <div class="flip-card-inner">
+            <div class="flip-card-front interact-multiagent">
+            </div>
+            <div class="flip-card-back">
+              <h1>Interact Multiagent</h1>
+              <p>Acesse a plataforma de atendimento</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flip-card grid-item-site">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p>Em breve</p>
+          </div>
+          <div class="flip-card-back">
+            <h1>Em breve</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--CHAT-->
+
+  <div class="btn-popup">
+    <a id="formHeader" class="btn-float btn btn1 btn-danger fa fa-comments fa-4x" onclick="exibirFormulario()"></a>
+    <div id="divForm" class="form hidden">
+      <!--
+        Alterar o action para o endereço do servidor ChatClient
+        Para teste local: http://[[IP_CHATCLIENT]]/chatclient/chat.php
+        Para acesso externo: http://[[IP_INTERNET]]/[[PATH_REDIRECIONAMENTO]]/chat.php
+      -->
+      <div class="div-img">
+        <img src="assets/CRABA-cropped.png" alt="" class="logo-form">
+      </div>
+
+      <form id="formulario" method="POST" action="http://192.168.1.195/chatclient/chat.php" onsubmit="return iniciar()">
+        <table>
+          <tr>
+            <td>Nome:</td>
+          </tr>
+          <tr>
+            <td><input id="ci" name="ci" type="text" class="inputText" required /></td>
+          </tr>
+          <tr>
+            <td>Serviço</td>
+          </tr>
+          <tr>
+            <td>
+              <select id="servico" name="servico" class="inputSelect" required>
+                <option value=""></option>
+                <option value="ADMINISTRATIVO">ADMINISTRATIVO</option>
+                <option value="FINANCEIRO">FINANCEIRO</option>
+                <option value="FISCALIZAÇÃO">FISCALIZAÇÃO</option>
+                <option value="FORMAÇÃO_PROFISSIONAL">FORMAÇÃO_PROFISSIONAL</option>
+                <option value="JURÍDICO">JURÍDICO</option>
+                <option value="OUTROS_SERVICOS">OUTROS_SERVICOS</option>
+                <option value="REGISTRO_E_CADASTRO">REGISTRO_E_CADASTRO</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><input type="submit" name="" value="Iniciar" class="btn btn2" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin: auto;
+}
+
+nav{
+  width: 100%;
+  height: 20%;
+  /* padding: 1rem 0 0.1rem 1rem; */
+  margin-bottom: 2rem;
+  padding: 0 20% 0 20%;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.logo-img{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.cards-site{
+  width: 100%;
+  height: 100%;
+  /* padding: 1rem 2rem 0 2rem; */
+}
+
+.grid-container-site{
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.grid-item-site{
+  justify-self: center;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 22rem;
+  height: 19rem;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  padding-top: 30%;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+.webmail{
+  background-image: url("assets/logo-office365.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.jitsi{
+  background-image: url("assets/jitsi-meet-logo.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.site-craba{
+  background-image: url("assets/CRABA-cropped.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.implanta{
+  background-image: url("assets/logo-implanta-nobg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.interact-multiagent{
+  background-image: url("assets/logo-interact-multiagent.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: black;
+  transform: rotateY(180deg);
+  vertical-align: middle;
+}
+.flip-card-back p {
+  padding-top: 10px;
+}
+
+@media (min-width: 600px){
+  .grid-container-site{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px){
+  .grid-container-site{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*Chat*/
+.div-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-form{
+  width: 7rem;
+}
+
+
+.btn-float{
+  position:fixed;
+	width:90px;
+	height:90px;
+	bottom:40px;
+	right:30px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50%;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.btn {
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  opacity: 1;
+
+}
+
+.btn1 {
+  padding: 6px 12px;
+}
+
+.btn2 {
+  margin-top: 10px;
+  padding: 2px 23px;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #0D83BF;
+  border-color: #119de4;
+}
+
+.btn-popup {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+.hidden {
+  display : none;
+}
+
+.form {
+  background-color: gainsboro;
+  padding: 10px;
+  height: 100%;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+.menu {
+  background-color: #0D83BF;
+  color: #fff;
+  font-weight: bold;
+  text-align: right;
+}
+
+.menu td:not(:first-child) {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu td:first-child {
+  width: 50%;
+}
+
+.menu td:not(:first-child):hover {
+  color: #fff;
+  background-color: RGBA(102, 102, 102, 0.74);
+}
+
+.inputText {
+  width: 205px;
+  height: 20px;  
+}
+
+.inputSelect{
+  width: 211px;
+  height: 26px;
+}
+
+.open {
+  opacity: 1;
+}
+

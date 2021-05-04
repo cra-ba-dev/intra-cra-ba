@@ -32,7 +32,7 @@ nav{
 
 .grid-container-site{
   display: grid;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -44,8 +44,8 @@ nav{
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 22rem;
-  height: 19rem;
+  width: 19rem;
+  height: 16rem;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -130,6 +130,7 @@ nav{
   .grid-container-site{
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (min-width: 900px){

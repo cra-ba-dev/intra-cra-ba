@@ -35,6 +35,7 @@ nav{
   max-width: 1000px;
   margin: 0 auto;
   gap: 1rem;
+  padding-bottom: 10%;
 }
 
 .grid-item-site{
